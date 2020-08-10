@@ -377,10 +377,10 @@ workflows:
     jobs:
       - lint-frontend
       - build-backend
-      # - test-frontend:
-      #     requires: [lint-frontend]
-      # - test-backend:
-      #     requires: [build-backend]
+      - test-frontend:
+          requires: [lint-frontend]
+      - test-backend:
+          requires: [build-backend]
       # - scan-backend:
       #     requires: [build-backend]
       # - scan-frontend:
